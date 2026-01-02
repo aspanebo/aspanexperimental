@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body main section div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+    padding: 100px 20px;
+}
+
+body main section:first-child div {
+    flex-direction: column;
+    padding-top: 120px;
+}
+
+.loading {
+    animation: fade 2s infinite ease-in-out;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    50%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+img {
+    transition: transform 0.08s ease, color 0.08s ease;
+    max-width: 100%;
+    height: auto;
+}
+
+img:active {
+    transform: scale(0.98);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+    body main section div {
+        min-height: 60vh;
+    }
+    
+    body main section:first-child div img {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    body main {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: center;
+    }
+    
+    body main section div {
+        min-height: auto;
+        padding: 20px 15px;
+    }
+    
+    body main section:first-child div {
+        padding-top: 100px;
+    }
+    
+    body main section:first-child div img {
+        max-width: 90%;
+        width: 400px;
+    }
+    
+    body main section.last div {
+        padding-bottom: 100px;
+    }
+    
+    .loading {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body main section div {
+        min-height: auto;
+        padding: 15px 10px;
+    }
+    
+    body main section:first-child div {
+        padding-top: 95px;
+    }
+    
+    body main section:first-child div img {
+        width: 95%;
+        max-width: 320px;
+    }
+    
+    body main section.last div {
+        padding-bottom: 95px;
+    }
+    
+    .loading {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    body main section div {
+        padding: 12px 8px;
+    }
+    
+    body main section:first-child div {
+        padding-top: 90px;
+    }
+    
+    body main section:first-child div img {
+        max-width: 280px;
+    }
+    
+    body main section.last div {
+        padding-bottom: 90px;
+    }
+    
+    .loading {
+        font-size: 12px;
+    }
+}

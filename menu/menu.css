@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+main .menu nav ul {
+    display: flex;
+    gap: 120px;
+    font-family: 'Fira Code', monospace;
+    font-weight: 400;
+    font-size: 24px;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}   
+
+.menu {
+    text-decoration: none;
+    color: #000000; 
+}
+
+li {
+    white-space: nowrap;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+    main .menu nav ul {
+        gap: 80px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        padding: 130px 20px 110px;
+    }
+    
+    main .menu nav ul {
+        flex-direction: column;
+        gap: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        padding: 120px 15px 100px;
+    }
+    
+    main .menu nav ul {
+        gap: 40px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 360px) {
+    .menu {
+        padding: 110px 10px 95px;
+    }
+    
+    main .menu nav ul {
+        gap: 35px;
+        font-size: 16px;
+    }
+}
